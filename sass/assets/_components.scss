@@ -1,0 +1,135 @@
+@import "variables";
+
+*{
+  @include transition-property(all);
+  @include transition-duration(.3s);
+  outline: none;
+}
+
+.btn-default{
+  background: none;
+  border:1px solid #fff;
+  color:#fff;
+  @include border-radius(5px);
+
+  &:hover{
+    background: #fff;
+    color: $darkColor;
+    border:1px solid #fff;
+  }
+}
+
+.img-responsive{
+  margin: auto;
+}
+
+.input-group{
+  margin: 15px 0;
+
+  & > input[type="email"]{
+    padding: 15px;
+    height: 58px;
+  }
+  & > .input-group-btn{
+    & > .btn{
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.btn-primary{
+  font-size: 14px;
+  color:$white;
+  font-weight: $font_bold;
+  background: $red;
+  border: none;
+  padding: 14px;
+  // min-width: 245px;
+  @include border-radius(5px);
+  @include box-shadow(0px 10px 10px 0px rgba(0,0,0,0.1));
+  text-transform: uppercase;
+
+  &:hover, &:focus{
+    background: $yellow;
+    color: $darkColor !important;
+  }
+}
+
+h5{
+  font-size: 12px;
+  font-weight: $font_bolder;
+  line-height: 14px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  color: $red;
+}
+h3{
+  font-size: 19px;
+  font-weight: $font_normal;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+h1{
+  font-size: 42px;
+  font-weight: $font_bolder;
+  line-height: 50px;
+  margin-bottom: 15px;
+}
+
+.navbar-toggle{
+  & .icon-bar{
+    background: #fff;
+
+    &:first-child{
+      margin-left: 30%;
+    }
+
+    &:first-child, &:last-child{
+      width: 70%;
+    }
+  }
+}
+
+.nav-tabs{
+  margin-bottom: 10px;
+
+  &>li{
+    padding: 0 5px;
+
+    &>a{
+      border: none !important;
+      border-top: 1px solid $darkColor !important;
+      border-radius: 0 !important;
+      -webkit-border-radius: 0 !important;
+      -moz-border-radius: 0 !important;
+      color: $darkColor;
+      @include opacity(.5);
+      text-transform: uppercase;
+      padding: 5px 0 15px;
+      font: {
+        size:12px;
+        weight:$font_bolder;
+      }
+    }
+
+    &.active, &:focus{
+      & a{
+        border-top: 1px solid $red !important;
+        background: none !important;
+        @include opacity(1);
+        color: $red !important;
+      }
+    }
+  }
+}
+
+a{
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
+video{
+  max-width: 100%;
+}
